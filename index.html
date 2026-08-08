@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pengonversi Mata Uang Rupiah 💵✨</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="main-container">
+        <!-- Header -->
+        <header class="app-header">
+            <h1>💵 CURRENCY CONVERTER</h1>
+            <p>Konversi mata uang Rupiah (IDR) ke berbagai mata uang asing populer dunia secara cepat dan praktis!</p>
+        </header>
+
+        <div class="converter-box">
+            <!-- Form Input Jumlah Uang -->
+            <div class="input-group">
+                <label for="input-nominal">Jumlah Uang (IDR / Rp)</label>
+                <input type="number" id="input-nominal" placeholder="Masukkan nominal (contoh: 500000)" min="1">
+            </div>
+
+            <!-- Pilihan Mata Uang Asing -->
+            <div class="input-group">
+                <label for="select-valas">Konversi Ke Mata Uang Asing</label>
+                <select id="select-valas">
+                    <option value="USD">🇺🇸 Dolar Amerika Serikat (USD)</option>
+                    <option value="EUR">🇪🇺 Euro (EUR)</option>
+                    <option value="JPY">🇯🇵 Yen Jepang (JPY)</option>
+                    <option value="SGD">🇸🇬 Dolar Singapura (SGD)</option>
+                    <option value="SAR">🇸🇦 Riyal Arab Saudi (SAR)</option>
+                </select>
+            </div>
+
+            <button id="btn-konversi" class="btn-pop">Konversi Sekarang 🚀</button>
+        </div>
+
+        <!-- Tampilan Hasil Konversi -->
+        <section class="output-section">
+            <div id="result-placeholder" class="placeholder-box">
+                <p>Masukkan nominal Rupiah dan pilih mata uang tujuan untuk melihat hasil konversi di sini. 📊</p>
+            </div>
+
+            <div id="card-result" class="result-card hidden">
+                <small class="rate-info" id="info-kurs">Kurs: 1 USD = Rp 15.500</small>
+                <div class="converted-amount">
+                    <span id="output-valas">0.00</span>
+                    <strong id="symbol-valas">USD</strong>
+                </div>
+                <hr class="divider">
+                <p class="origin-amount">Nominal Awal: <strong id="output-idr">Rp 0</strong></p>
+            </div>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
